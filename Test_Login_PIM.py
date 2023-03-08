@@ -5,13 +5,14 @@ from webdriver_manager.firefox import GeckoDriverManager
 from Test_locaters import locaters
 from Test_data import data
 from time import sleep
+import pytest
 class TEST_PRATIK:
     driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
     driver.implicitly_wait(10)
     driver.maximize_window()
     def __init__(self):
          self.driver.get(data.Pratik_Data().url)
-    def login(self):
+    def test_login(self):
         self.driver.find_element(by=By.NAME, value=locaters.Pratik_locaters().username_Inputbox).send_keys(data.Pratik_Data().username)
         self.driver.find_element(by=By.NAME, value=locaters.Pratik_locaters().password_Inputbox).send_keys(data.Pratik_Data().password)
         self.driver.find_element(by=By.XPATH, value=locaters.Pratik_locaters().Login_button).click()
@@ -21,6 +22,8 @@ class TEST_PRATIK:
         else :
          print("Invalid User ID/Password")#invalid Login
          assert self.driver.title == 'OrangeHRM'
+         yield
+         print("login failed")
         print("SUCCESS : Logged in with Username {a} and Password {b}". format(a=data.Pratik_Data.username, b=data.Pratik_Data.password))
         #pim selector
         self.driver.find_element(by=By.XPATH, value=locaters.Pratik_locaters.pim_selector).click()
@@ -34,4 +37,4 @@ class TEST_PRATIK:
         self.driver.find_element(by=By.XPATH,value=locaters.Pratik_locaters.save_button).click()#save data
         print("Employee Created sucessfully")
         self.driver.minimize_window()         
-TEST_PRATIK().login()
+TEST_PRATIK().test_login()

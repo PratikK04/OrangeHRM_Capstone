@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>RP-01</title>
+    <title>rep_login_01</title>
     <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
   <body onLoad="init()">
     <script>/* This Source Code Form is subject to the terms of the Mozilla Public
@@ -252,8 +252,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
     notFoundMessage.hidden = !allRowsHidden;
 }
 </script>
-    <h1>RP-01</h1>
-    <p>Report generated on 07-Mar-2023 at 21:19:24 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <h1>rep_login_01</h1>
+    <p>Report generated on 08-Mar-2023 at 22:10:13 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -269,8 +269,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.11.0</td></tr></table>
     <h2>Summary</h2>
-    <p>0 tests ran in 0.14 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">1 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>2 tests ran in 15.07 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -281,12 +281,23 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="error results-table-row">
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Error</td>
-          <td class="col-name">Login_PIM.py::collect</td>
-          <td class="col-duration"></td>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_login.py::test_setup</td>
+          <td class="col-duration">6.36</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\python.py:618: in _importtestmodule<br/>    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)<br/>..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\pathlib.py:533: in import_path<br/>    importlib.import_module(module_name)<br/>..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py:126: in import_module<br/>    return _bootstrap._gcd_import(name[level:], package, level)<br/>&lt;frozen importlib._bootstrap&gt;:1206: in _gcd_import<br/>    ???<br/>&lt;frozen importlib._bootstrap&gt;:1178: in _find_and_load<br/>    ???<br/>&lt;frozen importlib._bootstrap&gt;:1149: in _find_and_load_unlocked<br/>    ???<br/>&lt;frozen importlib._bootstrap&gt;:690: in _load_unlocked<br/>    ???<br/>..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\assertion\rewrite.py:159: in exec_module<br/>    source_stat, co = _rewrite_test(fn, self.config)<br/>..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\_pytest\assertion\rewrite.py:342: in _rewrite_test<br/>    tree = ast.parse(source, filename=strfn)<br/>..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\ast.py:50: in parse<br/>    return compile(source, filename, mode, flags,<br/><span class="error">E     File &quot;C:\Users\LENOVO\OneDrive\Desktop\Workspace\Project_AT_11\Login_PIM.py&quot;, line 16</span><br/><span class="error">E       def test_Login(self)</span><br/><span class="error">E                           ^</span><br/><span class="error">E   SyntaxError: expected &#x27;:&#x27;</span><br/></div></td></tr></tbody></table></body></html>
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_login.py::test_login</td>
+          <td class="col-duration">8.53</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>login successfull
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Test completed
+<br/></div></td></tr></tbody></table></body></html>
